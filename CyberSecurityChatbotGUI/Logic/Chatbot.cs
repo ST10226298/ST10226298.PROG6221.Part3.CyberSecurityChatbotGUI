@@ -100,7 +100,7 @@ namespace CyberSecurityChatbotGUI.Logic
 
             string lowerInput = input.ToLower();
 
-            // Check if input includes a keyword AND a request for more detail
+            // Check if input includes a keyword AND a request for more details
             foreach (var keyword in _keywordDetailedResponses.Keys)
             {
                 if (lowerInput.Contains(keyword) &&
@@ -127,7 +127,7 @@ namespace CyberSecurityChatbotGUI.Logic
                 }
             }
 
-            // Sentiment analysis for empathy
+            // Sentiment checks  for empathy
             string sentiment = _sentiment.Analyze(input);
             string sentimentMsg = string.IsNullOrEmpty(sentiment) ? "" : _sentiment.GetMoodMessage(sentiment) + " ";
 
